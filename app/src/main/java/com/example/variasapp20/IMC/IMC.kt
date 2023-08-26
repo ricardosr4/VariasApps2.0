@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.variasapp20.R
 import com.example.variasapp20.databinding.ActivityImcBinding
+import java.text.DecimalFormat
 
 class IMC : AppCompatActivity() {
     private lateinit var binding: ActivityImcBinding
@@ -11,6 +12,7 @@ class IMC : AppCompatActivity() {
 
     private var currentEdad: Int = 18
     private var currentPeso: Int = 70
+    private var currentAltura: Int = 100
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +30,11 @@ class IMC : AppCompatActivity() {
 
 
     private fun initListener() {
+        binding.rangeSliderAltura.addOnChangeListener { _, value, _ ->
+            val df = DecimalFormat("#.##")
+            currentAltura = df.format(value).toInt()
+            binding.tvAltura.text = "$currentAltura cm"
+        }
         binding.btnMenorEdad.setOnClickListener {
             currentEdad -= 1
             setEdad()
