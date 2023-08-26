@@ -3,8 +3,8 @@ package com.example.variasapp20.menu
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.variasapp20.MainActivity
-import com.example.variasapp20.R
+import com.example.variasapp20.IMC.IMC
+import com.example.variasapp20.saludo.MainActivity
 import com.example.variasapp20.databinding.ActivityMenuBinding
 
 class Menu : AppCompatActivity() {
@@ -16,6 +16,12 @@ class Menu : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSaludarApp.setOnClickListener { navigateToSaludarApp() }
+        binding.btnIMC.setOnClickListener { navigateToIMCApp() }
+    }
+
+    private fun navigateToIMCApp() {
+        val intent = Intent(this, IMC::class.java)
+        startActivity(intent)
     }
 
     private fun navigateToSaludarApp() {

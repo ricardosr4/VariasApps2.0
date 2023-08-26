@@ -1,4 +1,4 @@
-package com.example.variasapp20
+package com.example.variasapp20.saludo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
