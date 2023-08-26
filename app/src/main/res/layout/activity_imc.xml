@@ -149,7 +149,7 @@
                 android:id="@+id/tvPeso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="80"
+                android:text="70"
                 android:textColor="@color/white"
                 android:textSize="40dp"
                 android:textStyle="bold"/>
@@ -213,7 +213,7 @@
                 android:id="@+id/tvEdad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="80"
+                android:text="18"
                 android:textColor="@color/white"
                 android:textSize="40dp"
                 android:textStyle="bold"/>
