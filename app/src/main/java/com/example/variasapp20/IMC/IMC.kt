@@ -1,5 +1,6 @@
 package com.example.variasapp20.IMC
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.variasapp20.R
@@ -13,6 +14,11 @@ class IMC : AppCompatActivity() {
     private var currentEdad: Int = 18
     private var currentPeso: Int = 70
     private var currentAltura: Int = 100
+
+
+    companion object{
+        const val IMC_KEY = "IMC_RESULT"
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,12 +57,27 @@ class IMC : AppCompatActivity() {
             currentPeso += 1
             setPeso()
         }
+        binding.btnCalcular.setOnClickListener {
+            val result = calculateIMC()
+            navigateToResult(result)
+        }
     }
     private fun setEdad() {
         binding.tvEdad.text = currentEdad.toString()
     }
     private fun setPeso(){
         binding.tvPeso.text = currentPeso.toString()
+    }
+    private fun navigateToResult(result: Double) {
+        val intent = Intent(this, ResultIMC::class.java)
+        intent.putExtra(IMC_KEY, result)
+        startActivity(intent)
+    }
+
+    private fun calculateIMC(): Double {
+        val df = DecimalFormat("#.##")
+        val imc = currentPeso / (currentAltura.toDouble() / 100 * currentAltura.toDouble() / 100)
+        return df.format(imc).toDouble()
     }
 
 
