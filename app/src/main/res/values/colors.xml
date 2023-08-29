@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    //colores IMC
+    <color name="peso_bajo">#FFEB3B</color>
+    <color name="peso_normal">#1ECD25</color>
+    <color name="peso_sobrepeso">#FF5722</color>
+    <color name="peso_obesidad">#952805</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gris">#4B4949</color>

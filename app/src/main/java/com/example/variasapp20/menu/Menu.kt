@@ -4,8 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.variasapp20.IMC.IMC
+
 import com.example.variasapp20.saludo.MainActivity
 import com.example.variasapp20.databinding.ActivityMenuBinding
+import com.example.variasapp20.databinding.ActivityTimePickerBinding
+import com.example.variasapp20.datePicker.DatePicker
+import com.example.variasapp20.timePicker.TimePicker
+
 
 class Menu : AppCompatActivity() {
     private lateinit var binding: ActivityMenuBinding
@@ -17,6 +22,9 @@ class Menu : AppCompatActivity() {
 
         binding.btnSaludarApp.setOnClickListener { navigateToSaludarApp() }
         binding.btnIMC.setOnClickListener { navigateToIMCApp() }
+        binding.btnTimePicker.setOnClickListener { navigateToTimePicker() }
+        binding.btnDatePicker.setOnClickListener { navigateToDatePicker() }
+
     }
 
     private fun navigateToIMCApp() {
@@ -28,4 +36,13 @@ class Menu : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
+    private fun navigateToTimePicker(){
+        val intent = Intent(this, TimePicker::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToDatePicker(){
+        val intent = Intent(this, DatePicker::class.java)
+        startActivity(intent)
+    }
+
 }
