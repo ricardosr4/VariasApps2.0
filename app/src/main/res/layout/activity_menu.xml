@@ -52,6 +52,17 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/btnDatePicker" />
 
+  <Button
+      android:id="@+id/btnButtomNavigation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Botton de Navegacion"
+      android:layout_margin="16dp"
+      android:layout_marginTop="35dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnTimePicker" />
+
 
 
   </androidx.constraintlayout.widget.ConstraintLayout>

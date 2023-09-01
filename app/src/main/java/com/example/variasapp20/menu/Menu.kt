@@ -24,6 +24,7 @@ class Menu : AppCompatActivity() {
         binding.btnIMC.setOnClickListener { navigateToIMCApp() }
         binding.btnTimePicker.setOnClickListener { navigateToTimePicker() }
         binding.btnDatePicker.setOnClickListener { navigateToDatePicker() }
+        binding.btnButtomNavigation.setOnClickListener { navigateToButtomNavigation }
 
     }
 
@@ -36,13 +37,18 @@ class Menu : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-    private fun navigateToTimePicker(){
+
+    private fun navigateToTimePicker() {
         val intent = Intent(this, TimePicker::class.java)
         startActivity(intent)
     }
-    private fun navigateToDatePicker(){
+
+    private fun navigateToDatePicker() {
         val intent = Intent(this, DatePicker::class.java)
         startActivity(intent)
     }
 
+    private fun navigateToButtomNavigation(){
+        val intent = Intent (this, )
+    }
 }
