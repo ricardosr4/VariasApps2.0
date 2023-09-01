@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/page_inicio"
+
+    android:id="@+id/nav_menu_bottom">
+
+    <fragment
+        android:id="@+id/page_inicio"
+        android:name="com.example.variasapp20.bottonDeNavegacion.fragment.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/page_favorito"
+        android:name="com.example.variasapp20.bottonDeNavegacion.fragment.FavoritoFragment"
+        android:label="fragment_favorito"
+        tools:layout="@layout/fragment_favorito" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/page_setting"
+        android:name="com.example.variasapp20.bottonDeNavegacion.fragment.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+
+    </fragment>
+
+</navigation>

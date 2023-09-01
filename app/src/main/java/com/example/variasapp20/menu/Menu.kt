@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.variasapp20.IMC.IMC
+import com.example.variasapp20.bottonDeNavegacion.ButtomNavigation
 
 import com.example.variasapp20.saludo.MainActivity
 import com.example.variasapp20.databinding.ActivityMenuBinding
@@ -24,7 +25,7 @@ class Menu : AppCompatActivity() {
         binding.btnIMC.setOnClickListener { navigateToIMCApp() }
         binding.btnTimePicker.setOnClickListener { navigateToTimePicker() }
         binding.btnDatePicker.setOnClickListener { navigateToDatePicker() }
-        binding.btnButtomNavigation.setOnClickListener { navigateToButtomNavigation }
+        binding.btnButtomNavigation.setOnClickListener { navigateToButtomNavigation() }
 
     }
 
@@ -49,6 +50,7 @@ class Menu : AppCompatActivity() {
     }
 
     private fun navigateToButtomNavigation(){
-        val intent = Intent (this, )
+        val intent = Intent (this, ButtomNavigation::class.java)
+        startActivity(intent)
     }
 }
